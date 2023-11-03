@@ -10,6 +10,11 @@ const booksSchema = mongoose.Schema({
   language: { type: String },
   isBestseller: { type: Boolean },
   description: { type: String },
+
+    author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Author"
+ },
 });
 
 module.exports = mongoose.model("Books", booksSchema);
